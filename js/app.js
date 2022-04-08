@@ -93,15 +93,16 @@ function mostrarError(mensaje){
         parrafo.classList.add('text-center', 'my-10', 'p-2','bg-green-500', 'text-white', 'font-bold', 'uppercase');
         //insertar el parrafo antes del spinner.
         formulario.insertBefore(parrafo, spinner);
-        setTimeout(() => {
+        ssetTimeout(() => {
             parrafo.remove();
-            formularioEnviar.reset();
+            formulario.reset();
+            iniciarApp();
         }, 5000);
     }, 3000);
    
     } 
     function resetearFormulario(e) {
         formulario.reset();
-        e.preventDefault();
         iniciarApp();
+        e.preventDefault(); 
     }
