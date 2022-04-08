@@ -93,7 +93,7 @@ function mostrarError(mensaje){
         parrafo.classList.add('text-center', 'my-10', 'p-2','bg-green-500', 'text-white', 'font-bold', 'uppercase');
         //insertar el parrafo antes del spinner.
         formulario.insertBefore(parrafo, spinner);
-        ssetTimeout(() => {
+        setTimeout(() => {
             parrafo.remove();
             formulario.reset();
             iniciarApp();
